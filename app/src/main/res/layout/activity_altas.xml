@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    android:foregroundTint="#FFEB3B"
+    tools:context=".Altas">
+
+
+    <EditText
+        android:id="@+id/boleta"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:hint="Num.boleta"
+        android:inputType="text"
+        android:textSize="25dp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/alumno"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:hint="Nom.Completo"
+        android:textSize="20dp"
+
+        />
+
+    <EditText
+        android:id="@+id/materia"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:hint="Materia"
+        android:textSize="25dp"
+
+        />
+
+    <EditText
+        android:id="@+id/asesor"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:hint="Asesor"
+        android:textSize="25dp"
+
+        />
+
+
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="300dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Dar de alta asesoria"
+        android:id="@+id/dardealta"
+
+
+
+         />
+
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="400dp"
+        android:id="@+id/texto"
+        android:gravity="center"
+        android:textColor="@color/black"
+        >
+
+    </TextView>
+
+
+</RelativeLayout>

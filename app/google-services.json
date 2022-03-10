@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1004832862357",
+    "project_id": "fondos-de-pantalla-910fa",
+    "storage_bucket": "fondos-de-pantalla-910fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004832862357:android:c02eb1eefd39454fef2b9c",
+        "android_client_info": {
+          "package_name": "com.example.fondos_de_pantalla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004832862357-v4gj5t7eec00tm65d8gi0e3o6hp201do.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fondos_de_pantalla",
+            "certificate_hash": "c15bd52103a9b9fd337be418d6e7ea09cde99d6b"
+          }
+        },
+        {
+          "client_id": "1004832862357-fchinss3p4opc4mv7lpqtgak7h4rf7dr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiaLgwFc5YNzIMGIXWwrxD786oqzHUsEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004832862357-fchinss3p4opc4mv7lpqtgak7h4rf7dr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
