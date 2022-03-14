@@ -37,8 +37,6 @@ public class Menu_CRUD extends AppCompatActivity {
             }
 
 
-
-
 /*
         final String TAG = "MenuCrud";
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -78,6 +76,17 @@ public class Menu_CRUD extends AppCompatActivity {
             */
 
 
+        });
+        Button consultas = (Button) findViewById(R.id.Consultas);
+        consultas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent2 = new Intent(Menu_CRUD.this, Consultas.class);
+                startActivity(intent2);
+
+
+            }
         });
     }
 }
