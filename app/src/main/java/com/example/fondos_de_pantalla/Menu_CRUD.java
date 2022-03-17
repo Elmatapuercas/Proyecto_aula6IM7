@@ -77,6 +77,7 @@ public class Menu_CRUD extends AppCompatActivity {
 
 
         });
+
         Button consultas = (Button) findViewById(R.id.Consultas);
         consultas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,5 +89,19 @@ public class Menu_CRUD extends AppCompatActivity {
 
             }
         });
+
+
+        Button cambios = (Button) findViewById(R.id.Cambios);
+        cambios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent3 = new Intent(Menu_CRUD.this, Cambios.class);
+                startActivity(intent3);
+
+            }
+        });
+
+
     }
 }

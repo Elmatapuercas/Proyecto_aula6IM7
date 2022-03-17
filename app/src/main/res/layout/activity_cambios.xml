@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
-    android:foregroundTint="#FFEB3B"
-    tools:context=".Altas">
+    tools:context=".Cambios"
+    android:background="#2196F3"
+    >
 
 
     <EditText
@@ -19,7 +19,7 @@
         android:hint="Num.boleta"
         android:inputType="text"
         android:textSize="25dp"
-
+        android:textColorHint="@color/black"
 
         />
 
@@ -32,6 +32,7 @@
         android:gravity="center"
         android:hint="Nom.Completo"
         android:textSize="20dp"
+        android:textColorHint="@color/black"
 
         />
 
@@ -44,6 +45,7 @@
         android:gravity="center"
         android:hint="Materia"
         android:textSize="25dp"
+        android:textColorHint="@color/black"
 
         />
 
@@ -56,6 +58,7 @@
         android:gravity="center"
         android:hint="Asesor"
         android:textSize="25dp"
+        android:textColorHint="@color/black"
 
         />
 
@@ -69,12 +72,13 @@
         android:layout_marginTop="300dp"
         android:background="@color/white"
         android:gravity="center"
-        android:text="Dar de alta asesoria"
-        android:id="@+id/dardealta"
+        android:text="Modificar"
+        android:id="@+id/Cambios"
+        android:textSize="18dp"
 
 
 
-         />
+        />
 
 
 
@@ -92,6 +96,7 @@
 
 
 
+
     <Button
         android:layout_width="100dp"
         android:layout_height="50dp"
@@ -102,6 +107,10 @@
 
 
         ></Button>
+
+
+
+
 
 
 </RelativeLayout>

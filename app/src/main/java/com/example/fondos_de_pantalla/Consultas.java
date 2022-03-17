@@ -3,6 +3,7 @@ package com.example.fondos_de_pantalla;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,36 +30,51 @@ public class Consultas extends AppCompatActivity {
         setContentView(R.layout.activity_consultas);
 
 
+        //Declaracion de botones
+        Button regresar = (Button) findViewById(R.id.regresar);
         Button consultas = (Button) findViewById(R.id.consultar);
 
+
+        //Metodo para obtener datos de una boleta en especifico.
         consultas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                //Conectar base de datos.
                 final String TAG = "MenuCrud";
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+                //Grafico
                 TextView consulta = findViewById(R.id.consulta);
                 EditText boletita = findViewById(R.id.boleta);
 
+                //Obtener datos del EditText.
                 String consultota = boletita.getText().toString();
 
+                //Referencia el documento al que se quiere acceder.
                 DocumentReference docRef = db.collection("users").document(consultota);
                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+
+                    //metodo para obtener datos y establecerlos en la vista.
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if (task.isSuccessful()) {
                             DocumentSnapshot document = task.getResult();
-                            if (document.exists()) {
 
+                    /* Si el documento existe, obtendra los datos del documento asociado a la boleta
+                    ingresada */
+
+                            if (document.exists()) {
+                                //Se obtienen los strings del documento.
                                 String nombre = document.getString("nombre");
                                 String asesoria = document.getString("asesor");
                                 String materia = document.getString("materia");
 
+                                //se coloca la informacion dentro del textview.
                                 String resultado = nombre + "\n" + asesoria + "\n" + materia;
-
                                 consulta.setText(resultado);
 
+                        // En caso de que el documento no exista.
                             } else {
                                 Log.d(TAG, "No such document");
                             }
@@ -67,13 +83,18 @@ public class Consultas extends AppCompatActivity {
                         }
                     }
                 });
-
-
             }
         });
 
 
+        regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intentito = new Intent(Consultas.this,Menu_CRUD.class);
+                startActivity(intentito);
+            }
+        });
 
 
 

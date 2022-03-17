@@ -19,7 +19,6 @@ public class Carga extends AppCompatActivity {
             @Override
             public void run() {
                 //codigo que se ejecutara
-
                 Intent intent =new Intent(Carga.this, Menu.class);
                 startActivity(intent);
                 finish();
