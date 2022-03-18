@@ -1,5 +1,6 @@
 package com.example.fondos_de_pantalla;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,10 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class Cambios extends AppCompatActivity {
 
@@ -29,7 +29,7 @@ public class Cambios extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                final String TAG = "MenuCrud";
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
 
                 TextView confirm = findViewById(R.id.texto);
@@ -44,7 +44,7 @@ public class Cambios extends AppCompatActivity {
                 String n2 = texto2.getText().toString();
                 String n3 = texto3.getText().toString();
                 String n4 = texto4.getText().toString();
-
+/*
                 Map<String, Object> user = new HashMap<>();
                 user.put("boleta", n1);
                 user.put("nombre", n2);
@@ -56,10 +56,16 @@ public class Cambios extends AppCompatActivity {
 
                 confirm.setText("se hizo");
 
+*/
 
 
+DocumentReference doc = db.collection("users").document(n2);
 
+                doc.update("boleta",n1);
+                doc.update("materia",n3);
+                doc.update("asesor",n4);
 
+                confirm.setText("se hizo");
 
 
             }
