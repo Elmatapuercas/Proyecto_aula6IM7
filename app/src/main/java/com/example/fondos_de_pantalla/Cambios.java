@@ -40,19 +40,19 @@ public class Cambios extends AppCompatActivity {
 
 
 
-                String n1 = texto1.getText().toString();
+                int n1 = Integer.parseInt(texto1.getText().toString());
                 String n2 = texto2.getText().toString();
                 String n3 = texto3.getText().toString();
                 String n4 = texto4.getText().toString();
 
-                Map<String,Object> user = new HashMap<>();
+                Map<String, Object> user = new HashMap<>();
                 user.put("boleta", n1);
                 user.put("nombre", n2);
                 user.put("materia", n3);
                 user.put("asesor", n4);
 
 
-                db.collection("users").document(n1).set(user);
+                db.collection("users").document(n2).set(user);
 
                 confirm.setText("se hizo");
 

@@ -63,9 +63,8 @@
         />
 
 
-
-
     <Button
+        android:id="@+id/Cambios"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginLeft="150dp"
@@ -73,12 +72,10 @@
         android:background="@color/white"
         android:gravity="center"
         android:text="Modificar"
-        android:id="@+id/Cambios"
-        android:textSize="18dp"
+        android:textColor="#FFEB3B"
 
 
-
-        />
+        android:textSize="18dp" />
 
 
 

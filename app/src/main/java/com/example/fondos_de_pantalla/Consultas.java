@@ -46,10 +46,10 @@ public class Consultas extends AppCompatActivity {
 
                 //Grafico
                 TextView consulta = findViewById(R.id.consulta);
-                EditText boletita = findViewById(R.id.boleta);
+                EditText nombre = findViewById(R.id.nombre);
 
                 //Obtener datos del EditText.
-                String consultota = boletita.getText().toString();
+                String consultota = nombre.getText().toString();
 
                 //Referencia el documento al que se quiere acceder.
                 DocumentReference docRef = db.collection("users").document(consultota);
@@ -66,12 +66,12 @@ public class Consultas extends AppCompatActivity {
 
                             if (document.exists()) {
                                 //Se obtienen los strings del documento.
-                                String nombre = document.getString("nombre");
+                                Long boleta = document.getLong("boleta");
                                 String asesoria = document.getString("asesor");
                                 String materia = document.getString("materia");
 
                                 //se coloca la informacion dentro del textview.
-                                String resultado = nombre + "\n" + asesoria + "\n" + materia;
+                                String resultado = boleta + "\n" + asesoria + "\n" + materia;
                                 consulta.setText(resultado);
 
                         // En caso de que el documento no exista.

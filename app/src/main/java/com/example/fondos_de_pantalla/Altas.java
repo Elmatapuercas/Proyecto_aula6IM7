@@ -43,7 +43,7 @@ public class Altas extends AppCompatActivity {
                 EditText texto4 = findViewById(R.id.asesor);
 
                 //Obtener valores de las vista
-                String n1 = texto1.getText().toString();
+                int n1 = Integer.parseInt(texto1.getText().toString());
                 String n2 = texto2.getText().toString();
                 String n3 = texto3.getText().toString();
                 String n4 = texto4.getText().toString();
@@ -56,7 +56,7 @@ public class Altas extends AppCompatActivity {
                         user.put("asesor", n4);
 
                 //Se sube el usuario a la base de datos asignado a su boleta
-                        db.collection("users").document(n1).set(user);
+                        db.collection("users").document(n2).set(user);
 
                 //Se asigna los valores totales a un string para mostrarlos en la vista
                 String total = "Se realizo el siguiente registro:" + "\n"
