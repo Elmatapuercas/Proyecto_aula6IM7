@@ -9,6 +9,7 @@
     tools:context=".Altas">
 
 
+
     <EditText
         android:id="@+id/boleta"
         android:layout_width="300dp"
@@ -17,8 +18,9 @@
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:hint="Num.boleta"
-        android:inputType="text"
+        android:inputType="number"
         android:textSize="25dp"
+
 
 
         />
@@ -32,6 +34,7 @@
         android:gravity="center"
         android:hint="Nom.Completo"
         android:textSize="20dp"
+        android:inputType="text"
 
         />
 
@@ -44,6 +47,7 @@
         android:gravity="center"
         android:hint="Materia"
         android:textSize="25dp"
+        android:inputType="text"
 
         />
 
@@ -56,48 +60,58 @@
         android:gravity="center"
         android:hint="Asesor"
         android:textSize="25dp"
+        android:inputType="text"
+
+        />
+
+    <EditText
+        android:id="@+id/fecha"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:hint="Fecha"
+        android:textSize="25dp"
+        android:clickable="true"
+        android:focusable="false"
 
         />
 
 
 
-
     <Button
+        android:id="@+id/dardealta"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="350dp"
         android:background="@color/white"
         android:gravity="center"
         android:text="Dar de alta asesoria"
-        android:id="@+id/dardealta"
 
 
-
-         />
-
+        />
 
 
     <TextView
+        android:id="@+id/texto"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="400dp"
-        android:id="@+id/texto"
+        android:layout_marginTop="450dp"
         android:gravity="center"
-        android:textColor="@color/black"
-        >
+        android:textColor="@color/black">
 
     </TextView>
 
 
-
     <Button
+        android:id="@+id/regresar"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="550dp"
         android:layout_marginLeft="100dp"
-        android:id="@+id/regresar"
+        android:layout_marginTop="570dp"
         android:text="regresar"
 
 

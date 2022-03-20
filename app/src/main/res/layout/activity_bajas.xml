@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".Bajas">
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/boleta"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textSize="25dp"
+
+        />
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Eliminar"
+        android:id="@+id/eliminar"
+        android:textSize="18dp"
+
+
+        />
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:textColor="@color/black">
+
+    </TextView>
+
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/regresar"
+        android:text="regresar"
+
+
+        ></Button>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
