@@ -22,10 +22,14 @@ public class Menu extends AppCompatActivity {
 
 
         boton_CRUD = (Button) findViewById(R.id.crud);
+
+
         boton_CRUD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              startActivity(new Intent(Menu.this, Menu_CRUD.class));
+              Intent intent1 = new Intent(Menu.this, AuthActivity.class);
+              startActivity(intent1);
+
             }
         });
 

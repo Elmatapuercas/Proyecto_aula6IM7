@@ -22,6 +22,8 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.Date;
+
 public class Consultas extends AppCompatActivity {
 
     @Override
@@ -66,12 +68,13 @@ public class Consultas extends AppCompatActivity {
 
                             if (document.exists()) {
                                 //Se obtienen los strings del documento.
-                                Long boleta = document.getLong("boleta");
+                                String boleta = document.getString("nombre");
                                 String asesoria = document.getString("asesor");
                                 String materia = document.getString("materia");
+                                Date fecha = document.getDate("fecha");
 
                                 //se coloca la informacion dentro del textview.
-                                String resultado = boleta + "\n" + asesoria + "\n" + materia;
+                                String resultado = boleta + "\n" + asesoria + "\n" + materia + "\n" + fecha;
                                 consulta.setText(resultado);
 
                         // En caso de que el documento no exista.
